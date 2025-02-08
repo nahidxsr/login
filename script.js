@@ -1,12 +1,17 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const password = document.getElementById('password').value;
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    // এখানে লগইন যাচাই করার লজিক লিখুন
-    if (phoneNumber === "01700000000" && password === "12345") {
-        alert("Login successful!");
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // লোকাল স্টোরেজ থেকে রেজিস্টারকৃত ইউজার ডাটা বের করা
+    let storedEmail = localStorage.getItem("userEmail");
+    let storedPassword = localStorage.getItem("userPassword");
+
+    if (email === storedEmail && password === storedPassword) {
+        alert("✅ সফলভাবে লগইন হয়েছে!");
+        window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD/"; // ড্যাশবোর্ডে রিডাইরেক্ট
     } else {
-        alert("Invalid phone number or password.");
+        alert("❌ ভুল ইমেইল বা পাসওয়ার্ড!");
     }
 });
