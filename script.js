@@ -10,6 +10,9 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     let foundUser = users.find(user => user.email === email && user.password === password);
 
     if (foundUser) {
+        // ✅ ইউজার লগইন হলে তাকে লোকাল স্টোরেজে সংরক্ষণ করা হবে
+        localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+
         alert("✅ সফলভাবে লগইন হয়েছে!");
         window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD/";
     } else {
