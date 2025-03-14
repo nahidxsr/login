@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="bn"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>লগইন - Taka Gor BD</title> 
-    <link rel="stylesheet" href="styles.css"> 
-</head> 
-<body> 
-    <header>
-        Taka Gor BD
-    </header> 
-    <div class="container"> 
-        <h2>লগইন করুন</h2> 
-        <form id="loginForm"> 
-            <input type="email" id="email" placeholder="আপনার ইমেইল" required> 
-            <input type="password" id="password" placeholder="পাসওয়ার্ড" required> 
-            <button type="submit">লগইন</button> 
-        </form> 
-        <p>একাউন্ট নেই? <a href="https://nahidxsr.github.io/register/">রেজিস্ট্রেশন করুন</a></p> 
-    </div> 
+<html>
+<head>
+  <title>Slide Navbar</title>
+  <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">    
+    <input type="checkbox" id="chk" aria-hidden="true">
 
-    <script src="script.js"></script> 
+      <div class="signup">
+        <form>
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="txt" placeholder="User name" required="">
+          <input type="email" name="email" placeholder="Email" required="">
+          <input type="number" name="broj" placeholder="BrojTelefona" required="">
+          <input type="password" name="pswd" placeholder="Password" required="">
+          <button>Sign up</button>
+        </form>
+      </div>
 
-    <script>
-        // যদি ইউজার ইতিমধ্যে লগইন করে থাকে তাহলে সরাসরি ড্যাশবোর্ডে পাঠাবে
-        if (localStorage.getItem("userEmail")) {
-            window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD/";
-        }
-    </script>
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="Email" required="">
+          <input type="password" name="pswd" placeholder="Password" required="">
+          <button>Login</button>
+        </form>
+      </div>
+  </div>
 </body>
 </html>
